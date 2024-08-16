@@ -15,7 +15,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "proyeks")
+@Table(name = "proyek")
 public class proyek {
     @Id
     @GeneratedValue
@@ -45,6 +45,10 @@ public class proyek {
 
     private boolean isDeleted = false;
 
+    //constructor kosong
+    public proyek(){
+        
+    }
     //constructor
     public proyek(String id, String nama_proyek, String client, DateTimeFormat tanggalMulai, DateTimeFormat tanggalSelesai, String pimpinan_proyek, LocalDateTime createdAt, boolean isDeleted){
         this.id = id;
