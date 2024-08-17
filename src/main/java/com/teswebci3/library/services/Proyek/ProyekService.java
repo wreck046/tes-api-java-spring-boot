@@ -12,5 +12,5 @@ public interface ProyekService {
 
     Response updateNamaProyekById(String uuid, ProyekRequest request);
 
-    Response deleteNamaProyekById(String uuids);
+    Response deleteNamaProyekById(String uuid);
 }

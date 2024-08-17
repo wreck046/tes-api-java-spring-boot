@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.teswebci3.library.models.lokasi;
 
+@Repository
 public interface LokasiRepository extends JpaRepository<lokasi, String>{
     
 }
