@@ -9,8 +9,8 @@ public class ProyekRequest {
     private String id;
     private String nama_proyek;
     private String client;
-    private DateTimeFormat tanggalMulai;
-    private DateTimeFormat tanggalSelesai;
+    private LocalDateTime tanggalMulai;
+    private LocalDateTime tanggalSelesai;
     private String pimpinan_proyek;
     private String ket;
 
@@ -18,7 +18,7 @@ public class ProyekRequest {
 
     }
     
-    public ProyekRequest(String id, String nama_proyek, String client, DateTimeFormat tanggalMulai, DateTimeFormat tanggalSelesai, String pimpinan_proyek, String ket) {
+    public ProyekRequest(String id, String nama_proyek, String client, LocalDateTime tanggalMulai, LocalDateTime tanggalSelesai, String pimpinan_proyek, String ket) {
         this.id = id;
         this.nama_proyek = nama_proyek;
         this.client = client;
@@ -53,19 +53,19 @@ public class ProyekRequest {
         this.client = client;
     }
     
-    public DateTimeFormat getTanggalMulai(){
+    public LocalDateTime getTanggalMulai(){
         return tanggalMulai;
     }
     
-    public void setTanggalMulai(DateTimeFormat tanggalMulai){
+    public void setTanggalMulai(LocalDateTime tanggalMulai){
         this.tanggalMulai = tanggalMulai;
     }
     
-    public DateTimeFormat getTanggalSelesai(){
+    public LocalDateTime getTanggalSelesai(){
         return tanggalSelesai;
     }
     
-    public void setTanggalSelesai(DateTimeFormat tanggalSelesai){
+    public void setTanggalSelesai(LocalDateTime tanggalSelesai){
         this.tanggalSelesai = tanggalSelesai;
     }
     

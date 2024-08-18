@@ -34,7 +34,7 @@ public class lokasi {
     @Column(length = 100)
     private String kota;
 
-    @CreationTimestamp
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
 
     private boolean isDeleted = false;

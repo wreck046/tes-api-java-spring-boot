@@ -29,10 +29,10 @@ public class proyek {
     private String client;
 
     @DateTimeFormat
-    private DateTimeFormat tanggalMulai;
+    private LocalDateTime tanggalMulai;
     
     @DateTimeFormat
-    private DateTimeFormat tanggalSelesai;
+    private LocalDateTime tanggalSelesai;
 
     @Column(length = 100)
     private String pimpinan_proyek;
@@ -40,7 +40,7 @@ public class proyek {
     @Column(length = 100)
     private String ket;
 
-    @CreationTimestamp
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
 
     private boolean isDeleted = false;
@@ -50,7 +50,7 @@ public class proyek {
         
     }
     //constructor
-    public proyek(String id, String nama_proyek, String client, DateTimeFormat tanggalMulai, DateTimeFormat tanggalSelesai, String pimpinan_proyek, LocalDateTime createdAt, boolean isDeleted){
+    public proyek(String id, String nama_proyek, String client, LocalDateTime tanggalMulai, LocalDateTime tanggalSelesai, String pimpinan_proyek, LocalDateTime createdAt, boolean isDeleted){
         this.id = id;
         this.nama_proyek = nama_proyek;
         this.client = client;
@@ -86,19 +86,19 @@ public class proyek {
         this.client = client;
     }
 
-    public DateTimeFormat getTanggalMulai(){
+    public LocalDateTime getTanggalMulai(){
         return tanggalMulai;
     }
 
-    public void setTanggalMulai(DateTimeFormat tanggalMulai){
+    public void setTanggalMulai(LocalDateTime tanggalMulai){
         this.tanggalMulai = tanggalMulai;
     }
 
-    public DateTimeFormat getTanggalSelesai(){
+    public LocalDateTime getTanggalSelesai(){
         return tanggalSelesai;
     }
 
-    public void setTanggalSelesai(DateTimeFormat tanggalSelesai){
+    public void setTanggalSelesai(LocalDateTime tanggalSelesai){
         this.tanggalSelesai = tanggalSelesai;
     }
 
