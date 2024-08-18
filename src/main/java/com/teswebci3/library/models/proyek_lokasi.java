@@ -2,8 +2,14 @@ package com.teswebci3.library.models;
 
 import org.hibernate.annotations.UuidGenerator;
 
+import com.teswebci3.library.controllers.LokasiController;
+import com.teswebci3.library.models.lokasi;
+import com.teswebci3.library.models.proyek;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -13,13 +19,38 @@ public class proyek_lokasi {
     @Id
     @GeneratedValue
     @UuidGenerator
-    private String Id;
+    private String IdOther;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "Lokasi_id")
     private lokasi lokasi;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "proyek_id")
     private proyek proyek;
+
+   // Getter dan Setter
+   public String getIdOther() {
+    return IdOther;
+}
+
+public void setIdOther(String idOther) {
+    this.IdOther = idOther;
+}
+
+public lokasi getLokasi() {
+    return lokasi;
+}
+
+public void setLokasi(lokasi lokasi) {
+    this.lokasi = lokasi;
+}
+
+public proyek getProyek() {
+    return proyek;
+}
+
+public void setProyek(proyek proyek) {
+    this.proyek = proyek;
+}
 }

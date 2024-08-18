@@ -39,6 +39,10 @@ public class lokasi {
 
     private boolean isDeleted = false;
     //constructor
+    //constructor kosong
+    public lokasi(){
+
+    }
     public lokasi(String Id, String nama_lokasi, String negara, String provinsi, String kota, LocalDateTime createdAt, boolean isDeleted){
         this.Id = Id;
         this.nama_lokasi = nama_lokasi;

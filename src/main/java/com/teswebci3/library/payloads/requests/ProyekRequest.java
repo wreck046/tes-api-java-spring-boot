@@ -1,5 +1,6 @@
 package com.teswebci3.library.payloads.requests;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.hibernate.grammars.hql.HqlParser.LocalDateTimeContext;
@@ -9,8 +10,8 @@ public class ProyekRequest {
     private String id;
     private String nama_proyek;
     private String client;
-    private LocalDateTime tanggalMulai;
-    private LocalDateTime tanggalSelesai;
+    private LocalDate tanggalMulai;
+    private LocalDate tanggalSelesai;
     private String pimpinan_proyek;
     private String ket;
 
@@ -18,7 +19,7 @@ public class ProyekRequest {
 
     }
     
-    public ProyekRequest(String id, String nama_proyek, String client, LocalDateTime tanggalMulai, LocalDateTime tanggalSelesai, String pimpinan_proyek, String ket) {
+    public ProyekRequest(String id, String nama_proyek, String client, LocalDate tanggalMulai, LocalDate tanggalSelesai, String pimpinan_proyek, String ket) {
         this.id = id;
         this.nama_proyek = nama_proyek;
         this.client = client;
@@ -53,19 +54,19 @@ public class ProyekRequest {
         this.client = client;
     }
     
-    public LocalDateTime getTanggalMulai(){
+    public LocalDate getTanggalMulai(){
         return tanggalMulai;
     }
     
-    public void setTanggalMulai(LocalDateTime tanggalMulai){
+    public void setTanggalMulai(LocalDate tanggalMulai){
         this.tanggalMulai = tanggalMulai;
     }
     
-    public LocalDateTime getTanggalSelesai(){
+    public LocalDate getTanggalSelesai(){
         return tanggalSelesai;
     }
     
-    public void setTanggalSelesai(LocalDateTime tanggalSelesai){
+    public void setTanggalSelesai(LocalDate tanggalSelesai){
         this.tanggalSelesai = tanggalSelesai;
     }
     

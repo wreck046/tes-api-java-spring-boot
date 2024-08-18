@@ -1,5 +1,6 @@
 package com.teswebci3.library.models;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -29,10 +30,10 @@ public class proyek {
     private String client;
 
     @DateTimeFormat
-    private LocalDateTime tanggalMulai;
+    private LocalDate tanggalMulai;
     
     @DateTimeFormat
-    private LocalDateTime tanggalSelesai;
+    private LocalDate tanggalSelesai;
 
     @Column(length = 100)
     private String pimpinan_proyek;
@@ -50,7 +51,7 @@ public class proyek {
         
     }
     //constructor
-    public proyek(String id, String nama_proyek, String client, LocalDateTime tanggalMulai, LocalDateTime tanggalSelesai, String pimpinan_proyek, LocalDateTime createdAt, boolean isDeleted){
+    public proyek(String id, String nama_proyek, String client, LocalDate tanggalMulai, LocalDate tanggalSelesai, String pimpinan_proyek, LocalDateTime createdAt, boolean isDeleted){
         this.id = id;
         this.nama_proyek = nama_proyek;
         this.client = client;
@@ -86,19 +87,19 @@ public class proyek {
         this.client = client;
     }
 
-    public LocalDateTime getTanggalMulai(){
+    public LocalDate getTanggalMulai(){
         return tanggalMulai;
     }
 
-    public void setTanggalMulai(LocalDateTime tanggalMulai){
+    public void setTanggalMulai(LocalDate tanggalMulai){
         this.tanggalMulai = tanggalMulai;
     }
 
-    public LocalDateTime getTanggalSelesai(){
+    public LocalDate getTanggalSelesai(){
         return tanggalSelesai;
     }
 
-    public void setTanggalSelesai(LocalDateTime tanggalSelesai){
+    public void setTanggalSelesai(LocalDate tanggalSelesai){
         this.tanggalSelesai = tanggalSelesai;
     }
 
