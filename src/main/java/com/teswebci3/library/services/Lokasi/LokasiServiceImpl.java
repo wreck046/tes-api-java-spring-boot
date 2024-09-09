@@ -3,7 +3,6 @@ package com.teswebci3.library.services.Lokasi;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import org.hibernate.annotations.DialectOverride.OverridesAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

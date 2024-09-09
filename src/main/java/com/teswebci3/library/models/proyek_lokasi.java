@@ -2,14 +2,8 @@ package com.teswebci3.library.models;
 
 import org.hibernate.annotations.UuidGenerator;
 
-import com.teswebci3.library.controllers.LokasiController;
-import com.teswebci3.library.models.lokasi;
-import com.teswebci3.library.models.proyek;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

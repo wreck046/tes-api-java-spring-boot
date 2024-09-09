@@ -1,6 +1,5 @@
 package com.teswebci3.library.payloads.requests;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 public class LokasiRequest {
     private String Id;
